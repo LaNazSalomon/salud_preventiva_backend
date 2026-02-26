@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    // Estructura de archivos
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Configuración de entorno
+    "module": "commonjs",        // Express y Node usan CommonJS
+    "target": "ES2020",          // Buen balance entre features y compatibilidad
+    "lib": ["ES2020"],           // Librerías estándar de JS
+    "types": ["node"],           // Tipos de Node.js
+
+    // Outputs
+    "sourceMap": true,
+    "declaration": true,
+
+    // Type checking estricto
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Opciones recomendadas
+    "esModuleInterop": true,     // Permite importar módulos CommonJS como Express
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
