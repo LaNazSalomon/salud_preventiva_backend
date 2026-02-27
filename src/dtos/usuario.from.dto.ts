@@ -1,4 +1,4 @@
-import { IsString, IsNumber, Min, Max } from "class-validator";
+import { IsString, IsNumber, Min, Max, IsNotEmpty } from "class-validator";
 
 export class UsuarioSaludDTO {
   @IsString({ message: "El nombre debe ser un texto." })
@@ -27,4 +27,10 @@ export class UsuarioSaludDTO {
 
   @IsString({ message: "El objetivo debe ser un texto." })
   objetivo!: string;
+}
+
+export class UsuarioPreguntaDTO extends UsuarioSaludDTO {
+  @IsString({ message: "La pregunta debe ser un texto." })
+  @IsNotEmpty({ message: "La pregunta no puede estar vacía." })
+  pregunta!: string;
 }

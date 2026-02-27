@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { generarRecomendaciones } from "../controllers/recomendacionesController";
+import { generarRecomendaciones, responderPreguntaChat } from "../controllers/recomendacionesController";
 
 const router = Router();
 
 router.post("/recomendaciones", generarRecomendaciones);
+router.post("/recomendaciones/chat", responderPreguntaChat);
 
 export default router;
